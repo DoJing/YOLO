@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.17)
+project(projects)
+find_package(OpenCV)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_BUILD_TYPE "Release")
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(YOLO4 main.cpp YOLO.cpp YOLO.h)
+target_link_libraries(YOLO4 ${OpenCV_LIBS})
