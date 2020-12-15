@@ -22,7 +22,7 @@ int main()
     std::string video_outputFile = "/media/dojing/LINUXWIN/projects/result/yolov4_out.avi";
 
     //Confidence threshold;Non-maximum suppression threshold;Width of network's input image;Height of network's input image
-    YOLO yolo(0.5, 0.3, 416, 416);
+    YOLO yolo(0.5, 0.3, 384, 384);
     //测试图片
     //yolo.detect_image(image_path, modelWeights, modelConfiguration, classesFile, image_outputFile);
     //测试视频
