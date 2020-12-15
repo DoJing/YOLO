@@ -9,4 +9,12 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_BUILD_TYPE "Release")
 include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(YOLO4 main.cpp YOLO.cpp YOLO.h)
-target_link_libraries(YOLO4 ${OpenCV_LIBS})
+link_directories(./lib)
+target_link_libraries(YOLO4
+        opencv_dnn
+        opencv_imgproc
+        opencv_highgui
+        opencv_core
+        opencv_imgcodecs
+        opencv_video
+        opencv_videoio)
